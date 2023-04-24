@@ -21,9 +21,9 @@ public class Main {
 
     private void printMaxNumber(List<Integer> numberList) {
         int minNumber = numberList.get(0);
-        for (int i = 0; i < numberList.size(); i++) {
-            if (numberList.get(i) < minNumber) {
-                minNumber = numberList.get(i);
+        for (Integer integer : numberList) {
+            if (integer < minNumber) {
+                minNumber = integer;
             }
         }
         System.out.print("Najmniejsza liczba w liście to ");
@@ -32,9 +32,9 @@ public class Main {
 
     private void printMinNumber(List<Integer> numberList) {
         int maxNumber = numberList.get(0);
-        for (int i = 0; i < numberList.size(); i++) {
-            if (numberList.get(i) > maxNumber) {
-                maxNumber = numberList.get(i);
+        for (Integer integer : numberList) {
+            if (integer > maxNumber) {
+                maxNumber = integer;
             }
         }
         System.out.print("Największa liczba w liście to ");
@@ -55,9 +55,9 @@ public class Main {
     }
 
     private void printReversedList(List<Integer> list) {
-        for (int i = 0; i < list.size(); i++) {
-            System.out.print(list.get(list.size() - i - 1));
-            if (i < list.size() - 1) {
+        for (int i = list.size() - 1; i >= 0; i--) {
+            System.out.print(list.get(i));
+            if (i > 0) {
                 System.out.print(", ");
             }
         }
